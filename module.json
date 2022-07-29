@@ -1,9 +1,9 @@
 {
-    "name": "my-content-module",
-    "title": "My Content Module",
-    "description": "A collection of my content.",
-    "version": "1.0.0",
-    "author": "Me",
+    "name": "foundryVTTmacros",
+    "title": "Foundry VTT macros.",
+    "description": "Playing around with foundry macros.",
+    "version": "0.0.4",
+    "author": "Mike Godwin <godzig@gmail.com>",
     "minimumCoreVersion": "0.8.6",
     "compatibleCoreVersion": "9",
     "packs": [
