@@ -12,4 +12,3 @@ git tag -a v0.0.4 -m "Move script to database."
 git push --tags
 
 ```
-

@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - uses: actions/setup-python@master
+        with: 
+          python-version: '3.x'
+      - run:  python ./.github/scripts/make_db.py
       - name: Create Archive Release
         uses: thedoctor0/zip-release@master
         with:
