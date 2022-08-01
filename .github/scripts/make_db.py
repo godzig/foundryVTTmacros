@@ -16,14 +16,16 @@ SOURCE_PATH = 'scripts'
 # Output db file.
 OUTPUT_DB = 'packs/macros.db'
 
+
 def GenerateId():
   """ Returns a 16 character ID for database entries. """
   size = 16
   chars = string.ascii_uppercase + string.ascii_lowercase + string.digits
   return ''.join(random.choice(chars) for _ in range(size))
 
+
 def main(unused_argv):
-  with pathlib.Path(OUTPUT_DB).open("w", encoding="UTF-8") as macros_db:
+  with pathlib.Path(OUTPUT_DB).open('w', encoding='UTF-8') as macros_db:
     for filename in pathlib.Path(SOURCE_PATH).glob('*.js'):
       entry = {}
       entry['_id'] = GenerateId()
@@ -42,5 +44,6 @@ def main(unused_argv):
       json.dump(entry, macros_db)
       macros_db.write('\n')
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
   main(sys.argv[1:])
