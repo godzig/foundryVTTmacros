@@ -1,3 +1,5 @@
+// name: Twilight Sanctuary
+// img: icons/svg/dice-target.svg
 async function tempHP({
     actor
 }) {
