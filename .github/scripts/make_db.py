@@ -25,8 +25,12 @@ def GenerateId():
 
 
 def main(unused_argv):
+  # Create directory for output database if it does not already exist.
+  pathlib.Path(OUTPUT_DB).parent.mkdir(parents=True, exist_ok=True)
+
   with pathlib.Path(OUTPUT_DB).open('w', encoding='UTF-8') as macros_db:
     for filename in pathlib.Path(SOURCE_PATH).glob('*.js'):
+      # Apply entry defaults.
       entry = {}
       entry['_id'] = GenerateId()
       entry['name'] = filename.with_suffix('').name.replace('_', ' ')
@@ -41,6 +45,15 @@ def main(unused_argv):
       entry['permission']['default'] = 0
       entry['permission'][AUTHOR_ID] = 3
       entry['flags'] = {}
+
+      # Parse and apply entry overrides from header.
+      for line in filename.open().readlines():
+        if line.startswith('//'):
+          key, value = line.split(':')
+          entry[key.lstrip('//').strip()] = value.strip()
+        else:
+          break
+
       json.dump(entry, macros_db)
       macros_db.write('\n')
 
