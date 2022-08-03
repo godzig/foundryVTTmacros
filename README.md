@@ -1,4 +1,4 @@
-# foundryVTTmacros
+# Godzig's Foundry VTT Macros
 
 Playing around with foundry macros.
 
