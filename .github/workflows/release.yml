@@ -23,7 +23,8 @@ jobs:
         run: ./.github/scripts/get_version.sh
         shell: bash
       - name: Automatic Release Upload
-      - uses: "marvinpinto/action-automatic-releases@latest"
+        id: automatic_release
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: ${{ steps.get_version.outputs.version }}
