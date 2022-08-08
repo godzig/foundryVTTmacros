@@ -2,7 +2,7 @@
   "name": "GodzigsFoundryVTTmacros",
   "title": "Godzig's Foundry VTT Macros",
   "description": "Playing around with foundry macros.",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "Mike Godwin <godzig@gmail.com>",
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "9",
