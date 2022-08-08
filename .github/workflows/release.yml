@@ -12,16 +12,6 @@ jobs:
       - uses: actions/setup-python@master
         with:
           python-version: '3.x'
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Install Node.js dependencies
-        run: npm ci
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
       - run: python ./.github/scripts/make_db.py
       - name: Bump Version
         id: bump_version
