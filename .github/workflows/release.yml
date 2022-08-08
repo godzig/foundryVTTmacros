@@ -15,7 +15,7 @@ jobs:
       - run:  python ./.github/scripts/make_db.py
       - name: Bump Version
         id: bump_version
-        run:  python ./.github/scripts/update_version.py
+        run:  python ./.github/scripts/bump_version.py
       - name: Update Bump Version
         uses: test-room-7/action-update-file@v1
         with:
