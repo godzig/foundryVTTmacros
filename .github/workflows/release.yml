@@ -16,12 +16,6 @@ jobs:
       - name: Bump Version
         id: bump_version
         run:  python ./.github/scripts/bump_version.py
-      - name: Update Bump Version
-        uses: test-room-7/action-update-file@v1
-        with:
-          file-path: VERSION
-          commit-msg: Bump Version
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Archive Release
         uses: thedoctor0/zip-release@master
         with:
