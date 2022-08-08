@@ -1,7 +1,6 @@
 # Godzig's Foundry VTT Macros
 
-Playing around with foundry macros:
-- Twilight Sanctuary temp hp macro.
+Playing around with foundry macros: - Twilight Sanctuary temp hp macro.
 
 ## Release Process
 
@@ -9,6 +8,6 @@ Releases are automatically created with the commit date.
 
 ## Script Entry Overrides
 
-Default database tags may be overridden with colon-separated key-value pairs
-at the beginning of the script.  See `scripts/Twilight_Sanctuary.js` for an
-example of this functionality.
+Default database tags may be overridden with colon-separated key-value pairs at
+the beginning of the script. See `scripts/Twilight_Sanctuary.js` for an example
+of this functionality.
