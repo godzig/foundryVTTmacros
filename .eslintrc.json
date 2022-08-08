@@ -1,8 +1,5 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
+    "env": { },
     "parserOptions": {
         "ecmaVersion": "latest"
     },
