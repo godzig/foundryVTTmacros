@@ -18,7 +18,7 @@ jobs:
           filename: 'module.zip'
           exclusions: '*.git*'
       - name: Upload Release
-        uses: ncipollo/release-action@master
+        uses: ncipollo/release-action@main
         with:
           artifacts: 'module.json, module.zip'
           token: ${{ secrets.GITHUB_TOKEN }}
