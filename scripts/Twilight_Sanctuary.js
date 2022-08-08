@@ -1,22 +1,27 @@
 // name: Twilight Sanctuary
-// img: icons/svg/dice-target.svg
-async function tempHP({
-    actor
-}) {
-    let target = actor.name;
-    let currentTHP = actor.data.data.attributes.hp.temp;
-    let newTHP = new Roll("1d6 + @level", {
-        level: 2
+// img: icons/magic/life/cross-embers-glow-yellow-purple.webp
+
+async function tempHP({ actor }) {
+    const clericStats = character.data.items.getName("Cleric");
+    const clericLvl = clericStats.data.data.levels;
+    const target = actor.name;
+    const currentTHP = actor.data.data.attributes.hp.temp;
+    const newTHP = new Roll("1d6 + @level", {
+        level: clericLvl
     });
     let output;
     await newTHP.roll();
-    game.dice3d.showForRoll(newTHP);
+    try {
+        game.dice3d.showForRoll(newTHP);
+    } catch {}
     if (newTHP.total > currentTHP) {
         output = "<b>" + target + "</b> is raised to " + newTHP.total + " temp HP.";
         actor.data.data.attributes.hp.temp = newTHP.total;
     } else {
         output = "<b>" + target + "</b> already has more than " + newTHP.total + " temp HP.";
     }
+    let tooltip = await newTHP.render();
+    output += tooltip;
     return output;
 }
 

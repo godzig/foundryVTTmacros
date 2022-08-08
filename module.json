@@ -8,8 +8,8 @@
   "compatibleCoreVersion": "9",
   "packs": [
     {
-      "name": "module-macros",
-      "label": "Module Macros",
+      "name": "godzig-macros",
+      "label": "Godzig Macros",
       "path": "./packs/macros.db",
       "entity": "Macro",
       "type": "Macro"
