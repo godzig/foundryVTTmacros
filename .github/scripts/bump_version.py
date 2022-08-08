@@ -22,4 +22,4 @@ version = '{}.{}.{}'.format(major,minor,patch)
 with open('VERSION', 'w') as f:
   f.write(version)
 
-print('::set-output name=version::{}'.format(version))
+print('::set-output name=version::v{}'.format(version))

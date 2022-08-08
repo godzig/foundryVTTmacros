@@ -34,7 +34,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: ${{ steps.bump_version.outputs.version }}
           prerelease: false
-          title: "Latest"
+          title: ${{ steps.bump_version.outputs.version }}
           files: |
             module.json
             module.zip
