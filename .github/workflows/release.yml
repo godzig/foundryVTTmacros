@@ -18,7 +18,13 @@ jobs:
           filename: 'module.zip'
           exclusions: '*.git*'
       - name: Upload Release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@master
         with:
           artifacts: 'module.json, module.zip'
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Foundry Manifest Update
+        id: foundry-manifest-update
+        uses: foundryvtt-dcc/foundry-manifest-update-action@main
+        with:
+          actionToken: ${{ secrets.GITHUB_TOKEN }}
+          manifestFileName: 'module.json'
