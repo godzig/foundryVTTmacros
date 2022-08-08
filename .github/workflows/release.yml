@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   release:
@@ -10,12 +10,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-python@master
-        with: 
+        with:
           python-version: '3.x'
-      - run:  python ./.github/scripts/make_db.py
+      - run: python ./.github/scripts/make_db.py
       - name: Bump Version
         id: bump_version
-        run:  python ./.github/scripts/bump_version.py
+        run: python ./.github/scripts/bump_version.py
       - name: Create Archive Release
         uses: thedoctor0/zip-release@master
         with:
@@ -23,12 +23,13 @@ jobs:
           exclusions: '*.git*'
       - name: Automatic Release Upload
         id: automatic_release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: ${{ steps.bump_version.outputs.version }}
           prerelease: false
           title: ${{ steps.bump_version.outputs.version }}
           files: |
             module.json
             module.zip
+
