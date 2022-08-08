@@ -1,14 +1,13 @@
 {
-    "env": { 
-       "node": true,
-       "es2021": true
-    },
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "rules": {
-    },
-    "extends": [
-        "plugin:foundry-vtt/recommended"
-    ]
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "rules": {},
+  "extends": [
+    "plugin:foundry-vtt/recommended"
+  ]
 }
