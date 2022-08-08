@@ -12,6 +12,11 @@ jobs:
       - uses: actions/setup-python@master
         with:
           python-version: '3.x'
+                - name: Install modules
+      - name: Install Modules
+        run: yarn
+      - name: Run ESLint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
       - run: python ./.github/scripts/make_db.py
       - name: Bump Version
         id: bump_version
