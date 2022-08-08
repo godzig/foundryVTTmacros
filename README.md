@@ -4,13 +4,7 @@ Playing around with foundry macros.
 
 ## Release Process
 
-Releases are automatically created.  To simplify the process, modify
-your git config via:
-
-```
-git config pull.rebase true
-
-```
+Releases are automatically created with the commit date.
 
 ## Script Entry Overrides
 
