@@ -9,10 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Install Modules
-        run: yarn
-      - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
       - uses: actions/setup-python@master
         with:
           python-version: '3.x'
