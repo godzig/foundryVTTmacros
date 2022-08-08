@@ -4,12 +4,11 @@ Playing around with foundry macros.
 
 ## Release Process
 
-To create a release, after committing to the main branch, create and push a
-release tag with the version and description, e.g.
+Releases are automatically created.  To simplify the process, modify
+your git config via:
 
 ```
-git tag -a v0.0.4 -m "Move script to database."
-git push --tags
+git config pull.rebase true
 
 ```
 
