@@ -22,5 +22,5 @@ done
 # Format YAML using yamlfmt.
 find . -type f \! \( -name .git -prune \) \( -name "*.yaml" -o -name "*.yml" \) | while read FILE; do
   echo "[yamlfmt] ${FILE}"
-  ./tools/yamlfmt.py -m 2 -s 4 -o 2 "${FILE}"
+  ./tools/yamlfmt.py -m 2 -s 4 -o 2 -p "${FILE}"
 done

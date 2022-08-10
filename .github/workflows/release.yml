@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - 'main'
 
 jobs:
   release:
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-python@master
         with:
-          python-version: 3.x
+          python-version: '3.x'
       - run: python ./.github/scripts/build_macros_db.py
       - name: Set Release Version
         id: set_release_version
@@ -20,13 +20,13 @@ jobs:
       - name: Create Archive Release
         uses: thedoctor0/zip-release@master
         with:
-          filename: module.zip
+          filename: 'module.zip'
           exclusions: '*.git*'
       - name: Automatic Release Upload
         id: automatic_release
-        uses: marvinpinto/action-automatic-releases@latest
+        uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: ${{ steps.set_release_version.outputs.version }}
           prerelease: false
           title: ${{ steps.set_release_version.outputs.version }}
