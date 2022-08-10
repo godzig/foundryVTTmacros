@@ -21,7 +21,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: 'module.zip'
-          exclusions: '*.git*'
+          exclusions: '*.git* tools'
       - name: Automatic Release Upload
         id: automatic_release
         uses: 'marvinpinto/action-automatic-releases@latest'
