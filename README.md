@@ -4,7 +4,8 @@ Playing around with foundry macros: - Twilight Sanctuary temp hp macro.
 
 ## Release Process
 
-Releases are automatically created with the commit date.
+Releases are automatically created with the commit date.  Use
+`format_sources.sh` to keep formatting consistent.
 
 ## Script Entry Overrides
 

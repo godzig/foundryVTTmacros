@@ -11,7 +11,7 @@ import pathlib
 AUTHOR_ID = 'h3vjdsNcTNpDAKxr'
 
 # Source macro scripts.
-SOURCE_PATH = 'scripts'
+SOURCE_PATH = 'macros'
 
 # Output db file.
 OUTPUT_DB = 'packs/macros.db'
