@@ -16,7 +16,7 @@ jobs:
       - run: python ./.github/scripts/build_macros_db.py
       - name: Set Release Version
         id: set_release_version
-        run: python ./.github/scripts/set_release_.py
+        run: python ./.github/scripts/set_release_version.py
       - name: Create Archive Release
         uses: thedoctor0/zip-release@master
         with:
