@@ -1,10 +1,13 @@
 {
-  "name": "GodzigsFoundryVTTmacros",
+  "id": "GodzigsFoundryVTTmacros",
   "title": "Godzig's Foundry VTT Macros",
   "description": "Helpful Foundry VTT macros.",
   "author": "Mike Godwin <godzig@gmail.com>",
-  "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "9",
+  "compatibility": {
+    "minimum": 10,
+    "verified": 10.120,
+    "maximum": 10
+  },
   "packs": [
     {
       "name": "godzig-macros",
@@ -14,6 +17,7 @@
       "type": "Macro"
     }
   ],
+  "url": "https://github.com/godzig/foundryVTTmacros",
   "manifest": "https://github.com/godzig/foundryVTTmacros/releases/latest/download/module.json",
   "download": "https://github.com/godzig/foundryVTTmacros/releases/latest/download/module.zip"
 }
